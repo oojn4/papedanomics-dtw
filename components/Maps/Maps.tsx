@@ -6,8 +6,12 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 // import avatar from '@/public/next.svg';
+import dynamic from "next/dynamic";
+// const MapContainer = dynamic(()=> import("react-leaflet"),{ssr:false})
+// const TileLayer = dynamic(()=> import("react-leaflet"),{ssr:false})
+// const Marker = dynamic(()=> import("react-leaflet"),{ssr:false})
+// const Popup = dynamic(()=> import("react-leaflet"),{ssr:false})
 
-import classes from './Maps.module.css';
 // Define your custom icon
 const customIcon = new L.Icon({
   iconUrl: 'placeholder.png', // Replace with the path to your icon image

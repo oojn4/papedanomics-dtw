@@ -6,13 +6,18 @@ import { useEffect, useState } from 'react';
 import { Combobox, Input, InputBase, useCombobox } from '@mantine/core';
 import { Radar, RadarChart, PolarGrid, 
   PolarAngleAxis, PolarRadiusAxis } from 'recharts';
-  import Maps from "@/components/Maps/Maps";
-
+  import dynamic from 'next/dynamic'
 
 
 
 
 export function IntroUsers() {
+ 
+
+const Maps = dynamic(() => import('@/components/Maps/Maps'), {
+    ssr: false,
+    loading: () => <p>Loading...</p>
+})
   const points = [
     { lat: -0.8707101, lng: 134.1067164, name: 'White sand beach',sentimen : [
       { name: 'Atraksi', x: parseFloat('0.6094') },
