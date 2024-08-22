@@ -242,7 +242,8 @@ export function IntroUsers() {
   
   
     // Effect hook to update data when `value` changes
-    useEffect(() => {
+      useEffect(() => {
+    const loadDynamicModule = async () => {
       const filteredPoints = points.filter(item => item.name.toLowerCase().includes(value.toLowerCase().trim()));
   
       const newSentimenData = filteredPoints.flatMap(item => item.sentimen);
@@ -252,10 +253,16 @@ export function IntroUsers() {
         lng: filteredPoints[0].lng
       } : { lat: 0, lng: 0 };
   
+      // Assuming module has some function you need to use
+      // const result = module.someFunction(filteredPoints);
+
       setSentimenData(newSentimenData);
       setRfmData(newRfmData);
       setfocusPoint([newFocusPoint]);
-    }, [value]);
+    };
+
+    loadDynamicModule();
+  }, [value, points]);
   
     // Event handler for dropdown change
     const handleChange = (event:any) => {
