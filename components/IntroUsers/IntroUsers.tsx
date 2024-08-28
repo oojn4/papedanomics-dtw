@@ -6,7 +6,9 @@ import { useEffect, useState } from 'react';
 import { Combobox, Input, InputBase, useCombobox } from '@mantine/core';
 import { Radar, RadarChart, PolarGrid, 
   PolarAngleAxis, PolarRadiusAxis } from 'recharts';
-  import dynamic from 'next/dynamic'
+  // import dynamic from 'next/dynamic'
+  import Maps from '../Maps/Maps';
+  import React, { Suspense, lazy } from 'react';
 
 
 
@@ -14,10 +16,7 @@ import { Radar, RadarChart, PolarGrid,
 export function IntroUsers() {
  
 
-const Maps = dynamic(() => import('@/components/Maps/Maps'), {
-    ssr: false,
-    loading: () => <p>Loading...</p>
-})
+  // const Maps = lazy(() => import('@/components/Maps/Maps'));
   const points = [
     { lat: -0.8707101, lng: 134.1067164, name: 'White sand beach',sentimen : [
       { name: 'Atraksi', x: parseFloat('0.6094') },
@@ -279,7 +278,7 @@ const Maps = dynamic(() => import('@/components/Maps/Maps'), {
   return (
     <div className={classes.wrapper} id="maps">
     <Container className={classes.wrapperContainer}>
-      <Title className={classes.title}>Destinasi Tujuan Wisata</Title>
+      <Title className={classes.title}>Destinasi Wisata</Title>
       {/* <Text size="sm" className={classes.description}>
         Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ala ala 
       </Text> */}
@@ -314,7 +313,7 @@ const Maps = dynamic(() => import('@/components/Maps/Maps'), {
               <Combobox.Search
                 value={search}
                 onChange={(event) => setSearch(event.currentTarget.value)}
-                placeholder="Cari DTW"
+                placeholder="Cari Destinasi Wisata"
               />
               <Combobox.Options>
                 {options.length > 0 ? options : <Combobox.Empty>Nothing found</Combobox.Empty>}
@@ -357,7 +356,13 @@ const Maps = dynamic(() => import('@/components/Maps/Maps'), {
         </Grid>
       </Grid.Col>
       <Grid.Col span={8}>
-      <Maps points={points} /></Grid.Col>
+      {/* <Maps points={points} /> */}
+      <iframe
+  src="https://oojn4.github.io/dtw-map/#7/-2.420/132.435"
+  style={{ width: '100%', height: '600px', border: 'none' }}
+  title="Dashboard"
+/>
+      </Grid.Col>
      </Grid>
 
     </Container>

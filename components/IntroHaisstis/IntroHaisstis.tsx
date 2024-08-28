@@ -13,13 +13,13 @@ export function IntroHaisstis() {
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
-          Strategi Penguatan Pariwisata Papua Barat Tinjauan Pendekatan Big Data dan Kecerdasan Artifisial
+          Strategi Penguatan Pariwisata Papua Barat dan Papua Barat Daya Tinjauan Pendekatan Big Data dan Kecerdasan Artifisial
           </Title>
           <br />
           <Text c="dimmed" mt="md">
           Papua Barat dan Papua Barat Daya, yang dikenal dengan kekayaan alam dan budayanya, berpotensi menjadi tujuan wisata unggulan. Namun, kontribusi pariwisata di wilayah ini terhadap perekonomian lokal masih sangat terbatas. 
           Pemanfaatan big data dan kecerdasan artifisial dalam sektor pariwisata dapat dilakukan dengan membangun model analisis sentimen ulasan wisatawan dari Google Maps berbasis AI untuk evaluasi berbagai aspek seperti atraksi, fasilitas, akses, harga. 
-          Selain itu, dilakukan analisis Recency, Frequency, dan Monetary untuk evaluasi kematangan DTW di Papua Barat Daya dan Papua Barat .
+          Selain itu, dilakukan analisis Recency, Frequency, dan Monetary untuk evaluasi kematangan Destinasi Wisata di Papua Barat Daya dan Papua Barat .
           </Text>
           
           {/* <Group my="md">

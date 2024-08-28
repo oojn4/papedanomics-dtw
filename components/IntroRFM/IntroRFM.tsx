@@ -143,7 +143,8 @@ export function IntroRFM() {
     {/* Row for Scatter Plots */}
     <GridCol span={12}>
       <Grid>
-        <GridCol span={4}>
+      <Image src="unggulan.png" width={100}  style={{alignItems:"center"}} />
+        {/* <GridCol span={4}>
           <div style={{padding:10}}>
             <ScatterPlot data={scatterData1} title="Recency-Frequency Plot" xLabel='Recency' yLabel='Frequency'/>
           </div>
@@ -157,7 +158,7 @@ export function IntroRFM() {
           <div  style={{padding:10}}>
             <ScatterPlot data={scatterData3} title="Frequency-Monetary Plot" xLabel='Frequency' yLabel='Monetary'/>
           </div>
-        </GridCol>
+        </GridCol> */}
       </Grid>
     </GridCol>
   </Grid>

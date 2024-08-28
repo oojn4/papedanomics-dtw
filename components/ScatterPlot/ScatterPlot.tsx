@@ -1,7 +1,7 @@
 "use client"
-// import Plot from 'react-plotly.js';
+import Plot from 'react-plotly.js';
 import dynamic from "next/dynamic";
-const Plot = dynamic(()=> import("react-plotly.js"),{ssr:false})
+// const Plot = dynamic(()=> import("react-plotly.js"),{ssr:false})
 
 interface ScatterPlotProps {
   data: { x: number; y: number }[];

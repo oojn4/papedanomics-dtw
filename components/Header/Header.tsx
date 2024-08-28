@@ -48,7 +48,7 @@ export function Header({ drawerOpened, toggleDrawer } : { drawerOpened: any, tog
               RFM
             </a>
             <a href="#maps" className={classes.link}>
-              Peta DTW
+              Destinasi Wisata
             </a>
             <a href="#about" className={classes.link}>
               Tentang Kami
