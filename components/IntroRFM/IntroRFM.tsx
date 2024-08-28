@@ -2,7 +2,6 @@
 import {  Container, Grid, GridCol, Image, Paper, Space, Spoiler, Text, Title } from '@mantine/core';
 
 import classes from './IntroRFM.module.css';
-import ScatterPlot from '@/components/ScatterPlot/ScatterPlot';
 export function IntroRFM() {
   const scatterData1 = [
     { x: 20, y: 19 },
