@@ -355,10 +355,10 @@ export function IntroUsers() {
       <Grid.Col span={8}>
       {/* <Maps points={points} /> */}
       <iframe
-  src="https://oojn4.github.io/dtw-map/#7/-2.420/132.435"
-  style={{ width: '100%', height: '600px', border: 'none' }}
-  title="Dashboard"
-/>
+      src="https://oojn4.github.io/dtw-map/#7/-2.420/132.435"
+      style={{ width: '100%', height: '600px', border: 'none' }}
+      title="Dashboard"
+    />
       </Grid.Col>
      </Grid>
 

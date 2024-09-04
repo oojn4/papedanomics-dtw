@@ -1,9 +1,9 @@
 'use client'
-import { Textarea,Button, Container, Grid, GridCol, Group, Image, Paper, Space, Spoiler, Stack, Text, ThemeIcon, Title } from '@mantine/core';
+import Modal from '@/components/Modal/Modal';
+import { Button, Container, Grid, GridCol, Image, Paper, Spoiler, Stack, Text, Textarea, Title } from '@mantine/core';
 import { useRouter } from 'next/navigation';
-import classes from './IntroArticles.module.css';
 import { useState } from 'react';
-import Modal from '@/components/Modal/Modal'
+import classes from './IntroArticles.module.css';
 
 // Simple modal component
 export function IntroArticles() {
@@ -108,7 +108,7 @@ export function IntroArticles() {
         </Button>
       </Group> */}
     </Container>
-    <Container style={{ position: 'absolute', top: 250, left: 925 }} visibleFrom='lg'>
+    <Container style={{ position: 'absolute', top: 250, left: 800 }} visibleFrom='lg'>
       
         <Textarea
         autosize
@@ -116,7 +116,7 @@ export function IntroArticles() {
         maxRows={20}
           label="Masukan ulasan"
           placeholder="Masukan ulasan"
-          style={{ width: '400px' }}
+          style={{ width: '250px' }}
         />
         <br />
         <Button variant="blue" color="dark" onClick={handleButtonClick}>
