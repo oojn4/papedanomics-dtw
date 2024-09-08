@@ -1,12 +1,14 @@
 'use client'
-import { Container, Grid, GridCol, Title } from '@mantine/core';
+import { Combobox, Container, Grid, GridCol, Input, InputBase, Title, useCombobox } from '@mantine/core';
 import { useRouter } from 'next/navigation';
-import classes from './IntroUsers.module.css';
 import { useEffect, useState } from 'react';
-import { Combobox, Input, InputBase, useCombobox } from '@mantine/core';
-import { Radar, RadarChart, PolarGrid, 
-  PolarAngleAxis, PolarRadiusAxis } from 'recharts';
-  import React, { Suspense, lazy } from 'react';
+import {
+  PolarAngleAxis,
+  PolarGrid,
+  PolarRadiusAxis,
+  Radar, RadarChart
+} from 'recharts';
+import classes from './IntroUsers.module.css';
 
 
 
@@ -328,7 +330,7 @@ export function IntroUsers() {
           <>
           <div style={{ margin:'auto' }}> 
           <RadarChart height={300} width={300}  
-            outerRadius="80%" data={sentimenData}>
+            outerRadius="50%" data={sentimenData}>
             <PolarGrid />
             <PolarAngleAxis dataKey="name" />
             <PolarRadiusAxis />
@@ -340,7 +342,7 @@ export function IntroUsers() {
           
           {/* <RadarChart data={data} /> */}
           <RadarChart height={300} width={300} 
-            outerRadius="80%" data={rfmData}>
+            outerRadius="50%" data={rfmData}>
             <PolarGrid />
             <PolarAngleAxis dataKey="name" />
             <PolarRadiusAxis />
